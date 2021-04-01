@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E593788F84183F5BDA0BD92 /* Pods_NewsPaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A824925B6478451C023506C /* Pods_NewsPaper.framework */; };
+		A14559C126167F680070865D /* NPNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14559C026167F680070865D /* NPNetworkManager.swift */; };
+		A14559C82616813E0070865D /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14559C72616813E0070865D /* NetworkManagerTest.swift */; };
 		A150ABB42616677E0032CFAA /* NPRSSCreater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150ABB32616677E0032CFAA /* NPRSSCreater.swift */; };
 		A172D6752615E50E00F0D72D /* NPRSSParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A172D6742615E50E00F0D72D /* NPRSSParserProtocol.swift */; };
 		A17FAE8026111AD1003DBB9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FAE7F26111AD1003DBB9A /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		0A824925B6478451C023506C /* Pods_NewsPaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsPaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14559C026167F680070865D /* NPNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPNetworkManager.swift; sourceTree = "<group>"; };
+		A14559C72616813E0070865D /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		A150ABB32616677E0032CFAA /* NPRSSCreater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPRSSCreater.swift; sourceTree = "<group>"; };
 		A172D6742615E50E00F0D72D /* NPRSSParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPRSSParserProtocol.swift; sourceTree = "<group>"; };
 		A17FAE7C26111AD1003DBB9A /* NewsPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A14559BF26167DBC0070865D /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A14559C026167F680070865D /* NPNetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		A14559C6261681200070865D /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A14559C72616813E0070865D /* NetworkManagerTest.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		A150ABB22616675B0032CFAA /* Creater */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +151,7 @@
 		A17FAE9B26113031003DBB9A /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				A14559BF26167DBC0070865D /* NetworkManager */,
 				A17FAE9C26113041003DBB9A /* RSSParser */,
 			);
 			path = ServiceLayer;
@@ -160,6 +181,7 @@
 		A17FAEB726114EC0003DBB9A /* NewsPaperTests */ = {
 			isa = PBXGroup;
 			children = (
+				A14559C6261681200070865D /* NetworkManager */,
 				A17FAEC726114F08003DBB9A /* RSSParser */,
 				A17FAEB826114EC0003DBB9A /* NewsPaperTests.swift */,
 				A17FAEBA26114EC0003DBB9A /* Info.plist */,
@@ -342,6 +364,7 @@
 				A17FAE8026111AD1003DBB9A /* AppDelegate.swift in Sources */,
 				A17FAEAA26113CD4003DBB9A /* RSSItem.swift in Sources */,
 				A17FAEA22611328D003DBB9A /* NPRSSParser.swift in Sources */,
+				A14559C126167F680070865D /* NPNetworkManager.swift in Sources */,
 				A17FAEA626113CC0003DBB9A /* RSSChannel.swift in Sources */,
 				A150ABB42616677E0032CFAA /* NPRSSCreater.swift in Sources */,
 				A17FAE8226111AD1003DBB9A /* SceneDelegate.swift in Sources */,
@@ -352,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14559C82616813E0070865D /* NetworkManagerTest.swift in Sources */,
 				A17FAEB926114EC0003DBB9A /* NewsPaperTests.swift in Sources */,
 				A17FAECB261150CB003DBB9A /* ParserTest.swift in Sources */,
 			);
