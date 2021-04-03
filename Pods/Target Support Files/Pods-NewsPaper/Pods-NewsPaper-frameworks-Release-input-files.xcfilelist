@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-NewsPaper/Pods-NewsPaper-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework
 ${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
