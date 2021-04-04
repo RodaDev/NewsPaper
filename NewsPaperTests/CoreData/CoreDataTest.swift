@@ -24,6 +24,7 @@ class CoreDataTest: XCTestCase {
 
     override func tearDownWithError() throws {
         testItem = nil
+        keysVals = nil
     }
     
     func testDidCreate() {
