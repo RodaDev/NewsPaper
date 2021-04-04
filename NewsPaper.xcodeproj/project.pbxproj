@@ -24,6 +24,9 @@
 		A17FAEAA26113CD4003DBB9A /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FAEA926113CD4003DBB9A /* RSSItem.swift */; };
 		A17FAEB926114EC0003DBB9A /* NewsPaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FAEB826114EC0003DBB9A /* NewsPaperTests.swift */; };
 		A17FAECB261150CB003DBB9A /* ParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FAECA261150CB003DBB9A /* ParserTest.swift */; };
+		A18E6B7B26192E7F001BB3E6 /* NSManagedObject+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E6B7A26192E7F001BB3E6 /* NSManagedObject+Helper.swift */; };
+		A18E6B8326192FBD001BB3E6 /* NewsPaper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A18E6B8126192FBD001BB3E6 /* NewsPaper.xcdatamodeld */; };
+		A18E6B88261931BA001BB3E6 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E6B87261931BA001BB3E6 /* CoreDataTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		A17FAEB826114EC0003DBB9A /* NewsPaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPaperTests.swift; sourceTree = "<group>"; };
 		A17FAEBA26114EC0003DBB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A17FAECA261150CB003DBB9A /* ParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTest.swift; sourceTree = "<group>"; };
+		A18E6B7A26192E7F001BB3E6 /* NSManagedObject+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Helper.swift"; sourceTree = "<group>"; };
+		A18E6B8226192FBD001BB3E6 /* NewsPaper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsPaper.xcdatamodel; sourceTree = "<group>"; };
+		A18E6B87261931BA001BB3E6 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		B01341F03D1DD0BF60539C81 /* Pods-NewsPaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsPaper.debug.xcconfig"; path = "Target Support Files/Pods-NewsPaper/Pods-NewsPaper.debug.xcconfig"; sourceTree = "<group>"; };
 		B966867DEC4F7B526E8D17C6 /* Pods-NewsPaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsPaper.release.xcconfig"; path = "Target Support Files/Pods-NewsPaper/Pods-NewsPaper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +142,7 @@
 		A17FAE7E26111AD1003DBB9A /* NewsPaper */ = {
 			isa = PBXGroup;
 			children = (
+				A18E6B7826192E3D001BB3E6 /* DataBaseLayer */,
 				A17FAE9B26113031003DBB9A /* ServiceLayer */,
 				A17FAE7F26111AD1003DBB9A /* AppDelegate.swift */,
 				A17FAE8126111AD1003DBB9A /* SceneDelegate.swift */,
@@ -181,6 +188,7 @@
 		A17FAEB726114EC0003DBB9A /* NewsPaperTests */ = {
 			isa = PBXGroup;
 			children = (
+				A18E6B86261931A3001BB3E6 /* CoreData */,
 				A14559C6261681200070865D /* NetworkManager */,
 				A17FAEC726114F08003DBB9A /* RSSParser */,
 				A17FAEB826114EC0003DBB9A /* NewsPaperTests.swift */,
@@ -195,6 +203,39 @@
 				A17FAECA261150CB003DBB9A /* ParserTest.swift */,
 			);
 			path = RSSParser;
+			sourceTree = "<group>";
+		};
+		A18E6B7826192E3D001BB3E6 /* DataBaseLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A18E6B8026192F98001BB3E6 /* CoreDataModel */,
+				A18E6B7926192E5B001BB3E6 /* Helpers */,
+			);
+			path = DataBaseLayer;
+			sourceTree = "<group>";
+		};
+		A18E6B7926192E5B001BB3E6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A18E6B7A26192E7F001BB3E6 /* NSManagedObject+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A18E6B8026192F98001BB3E6 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A18E6B8126192FBD001BB3E6 /* NewsPaper.xcdatamodeld */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		A18E6B86261931A3001BB3E6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A18E6B87261931BA001BB3E6 /* CoreDataTest.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D2D769949CDDCB4B69D922E4 /* Pods */ = {
@@ -363,11 +404,13 @@
 				A17FAE9E26113067003DBB9A /* RSSField.swift in Sources */,
 				A17FAE8026111AD1003DBB9A /* AppDelegate.swift in Sources */,
 				A17FAEAA26113CD4003DBB9A /* RSSItem.swift in Sources */,
+				A18E6B7B26192E7F001BB3E6 /* NSManagedObject+Helper.swift in Sources */,
 				A17FAEA22611328D003DBB9A /* NPRSSParser.swift in Sources */,
 				A14559C126167F680070865D /* NPNetworkManager.swift in Sources */,
 				A17FAEA626113CC0003DBB9A /* RSSChannel.swift in Sources */,
 				A150ABB42616677E0032CFAA /* NPRSSCreater.swift in Sources */,
 				A17FAE8226111AD1003DBB9A /* SceneDelegate.swift in Sources */,
+				A18E6B8326192FBD001BB3E6 /* NewsPaper.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18E6B88261931BA001BB3E6 /* CoreDataTest.swift in Sources */,
 				A14559C82616813E0070865D /* NetworkManagerTest.swift in Sources */,
 				A17FAEB926114EC0003DBB9A /* NewsPaperTests.swift in Sources */,
 				A17FAECB261150CB003DBB9A /* ParserTest.swift in Sources */,
@@ -638,6 +682,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A18E6B8126192FBD001BB3E6 /* NewsPaper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A18E6B8226192FBD001BB3E6 /* NewsPaper.xcdatamodel */,
+			);
+			currentVersion = A18E6B8226192FBD001BB3E6 /* NewsPaper.xcdatamodel */;
+			path = NewsPaper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A17FAE7426111AD1003DBB9A /* Project object */;
 }
