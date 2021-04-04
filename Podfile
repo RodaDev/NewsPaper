@@ -8,6 +8,7 @@ target 'NewsPaper' do
 pod 'ProgressHUD'
 pod 'SnapKit', '~> 5.0.0'
 pod 'SwiftDate', '~> 5.0'
+pod 'MagicalRecord', :git => 'https://github.com/magicalpanda/MagicalRecord'
 
   # Pods for NewsPaper
 
