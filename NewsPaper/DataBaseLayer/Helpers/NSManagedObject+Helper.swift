@@ -8,8 +8,9 @@
 import MagicalRecord
 
 extension NSManagedObject {
-    static func createEntity<T:NSManagedObject> (keysValues: [String : Any], shouldSave: Bool) -> T? {
-        let context = NSManagedObjectContext.mr_rootSaving()
+    static func createEntity<T:NSManagedObject> (keysValues: [String : Any],
+                                                 shouldSave: Bool,
+                                                 context: NSManagedObjectContext = .mr_rootSaving()) -> T? {
         let createEntity = T.mr_createEntity(in: context)
         for (key, value) in keysValues {
             if createEntity?.entity.attributesByName.keys.contains(key) ?? false {
@@ -22,5 +23,11 @@ extension NSManagedObject {
         }
         
         return createEntity
+    }
+    
+    func delete() {
+        let context = managedObjectContext
+        mr_deleteEntity()
+        context?.mr_saveToPersistentStoreAndWait()
     }
 }

@@ -50,4 +50,22 @@ class NetworkManagerTest: XCTestCase {
         wait(for: [expectation], timeout: 2)
         
     }
+    
+    func testWithParser() {
+        let expectation = XCTestExpectation(description: "response")
+        
+        networkManager.getData { (data, response, error) in
+            guard let data = data else {
+                return
+            }
+            let xmlParser = XMLParser(data: data)
+            let parser = NPRSSParser(xmlParser: xmlParser)
+            xmlParser.delegate = parser
+            parser.parseToItems { (items) in
+                print("Item: \(items[1])")
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+    }
 }
